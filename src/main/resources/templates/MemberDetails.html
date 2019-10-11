@@ -2,16 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Save Employee</title>
-    <link rel="stylesheet" type="text/css" href="<c:url value="/css/main.css"/>">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" th:href="@{/css/main.css}">
 </head>
 <body>
 <div id="global">
     <h4>The Member details have been saved.</h4>
     <p>
     <h5>Details:</h5>
-    First Name: ${member.firstName}<br/>
-    Last Name: ${member.lastName}<br/>
+<!--    First Name: ${member.firstName}<br/>-->
+    First Name: <span th:text="${member.firstName}"></span><br/>
+<!--    Last Name: ${member.lastName}<br/>-->
+    Last name: <span th:text="${member.lastName}"></span><br/>
     Age: ${member.age}
+    Age: <span th:href="${member.age}"></span>
     </p>
 </div>
 </body>
