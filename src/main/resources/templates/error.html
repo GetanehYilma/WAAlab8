@@ -8,10 +8,10 @@
 
 <center>
 
-    <img src="<spring:url value="/image/error_page.jpg" htmlEscape="true" />"
+    <img th:src="@{/image/error_page.jpg}" src="/image/error_page.jpg" htmlEscape="true" />"
     alt="Page not found  JSP!!!" />
 
-    <H2>${requestScope['javax.servlet.error.message']}</H2>
+<!--    <H2 th:text="${requestScope['javax.servlet.error.message']}"></H2>-->
 
     <p>
         <button type=button onclick=window.location.href="<spring:url value="/employee_input" />">Home</button>
